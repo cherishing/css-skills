@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0; padding:0;}
+	.div1{width:200px; height:100px; background: darkseagreen; margin:0 auto; text-align:center;padding:100px 0 0 0;}
+	label{display:inline-block; width:28px; height:28px; border:1px solid #ccc; border-radius:100%; background:#fff; position:relative; margin-right:10px;}
+	label.radio-1::after{content:""; position:absolute; top:4px; left:4px; width:20px; height:20px; background:#666; border-radius: 50%; transform:scale(0); transition:transform .2s ease-out;}
+	#radio-1:checked+label.radio-1{background:#eee; transition: background .2s ease-out;}
+	#radio-1:checked+label.radio-1::after{transform:scale(1); transition:transform .2s ease-out;}
+	#radio-1{display:none;}
+
+	/*rotate*/
+	label.radio-2::after{content:""; position:absolute; top:4px; left:4px; width:20px; height:20px; background:#666; border-radius: 50%; transform:scale(0) rotate(-180deg);  transform-origin: 0px 0; transition:transform .2s ease-out;}
+	#radio-2:checked+label.radio-2{background:#eee; transition: background .2s ease-out;}
+	#radio-2:checked+label.radio-2::after{transform:scale(1) rotate(0deg); transition:transform .2s ease-out;}
+	#radio-2{display:none;}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<input type="radio" name="radio-1" id="radio-1">
+		<label for="radio-1" class="radio-1"></label>
+		<input type="radio" name="radio-2" id="radio-2">
+		<label for="radio-2" class="radio-2"></label>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0; padding:0;}
+	.div1{width:200px; height:100px; background: darkseagreen; margin:0 auto; text-align:center;padding:100px 0 0 0;}
+	label{display:inline-block; width:28px; height:28px; border:1px solid #ccc; border-radius:100%; background:#fff; position:relative;}
+	label::after{content:""; position:absolute; top:4px; left:4px; width:20px; height:20px; background:#666; border-radius: 50%; transform:scale(0); transition:transform .2s ease-out;}
+	#radio-1:checked+label{background:#eee; transition: background .2s ease-out;}
+	#radio-1:checked+label::after{transform:scale(1); transition:transform .2s ease-out;}
+	#radio-1{display:none;}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<input type="radio" name="radio-1" id="radio-1">
+		<label for="radio-1"></label>
+	</div>
+</body>
+</html>

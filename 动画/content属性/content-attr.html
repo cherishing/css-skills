@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    span{display:block;}
+    .attr::after{content:attr(data-title);}
+
+    .quotes::after{content:close-quote;}
+    .quotes::before{content:open-quote;}
+    </style>
+</head>
+<body>
+<span class="attr" data-title="独此一家">它的属性是：</span>
+<span class="quotes">引号</span>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>button-css</title>
+	<style>
+		*{margin:0; padding:0;}
+		.box{padding:10px;}
+		.button{width:245px; padding:16px 32px; margin:16px; vertical-align:middle; display:block; position:relative; z-index:1;}
+		.button-wayra{overflow:hidden; color:#000; border-color:#000; background: #fff; transition: border-color .3s,color .3s; transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);}
+		.button-wayra:hover{color:#fff; border-color:#3f51b5; cursor:pointer;}
+		.button-wayra::before{content:"";position:absolute;top:0; left:0; width:150%; height:100%; background:#37474f; transform-origin:0% 100%;  
+			-webkit-transform-origin:0% 100%; transition:transform 0.3s, opacity 0.3s, background-color 0.3s; -webkit-transition:transform 0.3s, opacity 0.3s, background-color 0.3s; z-index:-1; transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0); -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);}
+		.button-wayra:hover::before{opacity:1; background-color:#3f51b5; transform:rotate3d(0, 0, 1, 0deg);  -webkit-transform:rotate3d(0, 0, 1, 0deg);transition-timing-function:cubic-bezier(0.2, 1, 0.3, 1); -webkit-transition-timing-function:cubic-bezier(0.2, 1, 0.3, 1); }
+	</style>
+</head>
+<body>
+<div class="box">
+	<button class="button button-wayra">click here</button>
+</div>    
+</body>
+</html>
